@@ -28,7 +28,7 @@ test:
 
 about:
   home: https://github.com/timothycrosley/isort
-  license: MIT License
+  license: MIT
   summary: 'A Python utility / library to sort Python imports.'
   description: |
     isort is a Python utility / library to sort imports alphabetically, and
@@ -42,4 +42,3 @@ about:
 extra:
   recipe-maintainers:
     - goanpeca
-
