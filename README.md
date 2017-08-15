@@ -3,7 +3,7 @@ About isort
 
 Home: https://github.com/timothycrosley/isort
 
-Package license: MIT License
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
