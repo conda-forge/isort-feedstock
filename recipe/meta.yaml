@@ -1,30 +1,29 @@
 {% set name = "isort" %}
-{% set version = "4.2.15" %}
-{% set sha256 = "79f46172d3a4e2e53e7016e663cc7a8b538bec525c36675fcfd2767df30b3983" %}
+{% set version = "4.3.4" %}
+{% set sha256 = "b9c40e9750f3d77e6e4d441d8b0266cf555e7cdabdcff33c4fd06366ca761ef8" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{version}}.tar.gz
   url: https://pypi.io/packages/source/{{ name [0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-    script: python setup.py install --single-version-externally-managed --record=record.txt
     number: 0
+    script: python -m pip install --no-deps --ignore-installed .
     entry_points:
     - isort = isort.main:main
 
 requirements:
   build:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - setuptools
+    - futures  # [py27]
 
 test:
   imports:
