@@ -19,7 +19,9 @@ achieve this without ugly hacks and/or py2to3.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/isort-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/isort-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/isort-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/isort-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/isort-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/isort-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/isort-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/isort-feedstock/branch/master)
 
 Current release info
 ====================
