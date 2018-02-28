@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - setuptools
-    - futures  # [py27]
+    - futures
 
 test:
   imports:
