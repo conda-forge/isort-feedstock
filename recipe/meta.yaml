@@ -1,4 +1,4 @@
-{% set version = "4.3.5" %}
+{% set version = "4.3.7" %}
 
 package:
   name: isort
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/isort/isort-{{ version }}.tar.gz
-  sha256: d05a79a16b3ea1aea19d82d29352fde3420170b7c9377ff02138d16b684788fe
+  sha256: bbdb9c4d97dcabaa937511f1bf4d2b2bdbf0370053a4b587ad1adf19f83c1a5c
 
 build:
     number: 0
-    script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     entry_points:
     - isort = isort.main:main
 
