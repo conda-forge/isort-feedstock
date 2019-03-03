@@ -1,4 +1,4 @@
-{% set version = "4.3.9" %}
+{% set version = "4.3.10" %}
 
 package:
   name: isort
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/isort/isort-{{ version }}.tar.gz
-  sha256: f19b23b22fb5a919a081bc31aabcc0991614c244d9215267e11abf2ca7b684ce
+  sha256: 144c4295314c0ed34fb034f838b2b7e242c52dd3eafdd6f5d49078692f582c0c
 
 build:
     number: 0
@@ -22,6 +22,7 @@ requirements:
     - python
     - setuptools
     - futures  # [py27]
+    - backports.functools_lru_cache  # [py27]
 
 test:
   imports:
