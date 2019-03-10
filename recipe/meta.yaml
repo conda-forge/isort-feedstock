@@ -1,4 +1,4 @@
-{% set version = "4.3.13" %}
+{% set version = "4.3.14" %}
 
 package:
   name: isort
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/isort/isort-{{ version }}.tar.gz
-  sha256: abbb2684aa234d5eb8a67ef36d4aa62ea080d46c2eba36ad09e2990ae52e4305
+  sha256: 473c458f279f1545fe80a4c901fe83681c27fb6969ae0bd2f1472143fc46eb1f
 
 build:
     number: 0
