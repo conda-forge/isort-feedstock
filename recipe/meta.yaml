@@ -21,8 +21,8 @@ requirements:
   run:
     - python
     - setuptools
-    - futures  # [py27]
-    - backports.functools_lru_cache  # [py27]
+    - futures  # [py<32]
+    - backports.functools_lru_cache  # [py<32]
 
 test:
   imports:
