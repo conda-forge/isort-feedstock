@@ -1,4 +1,4 @@
-{% set version = "4.3.21" %}
+{% set version = "5.0.1" %}
 
 package:
   name: isort
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/isort/isort-{{ version }}.tar.gz
-  sha256: 54da7e92468955c4fceacd0c86bd0ec997b0e1ee80d97f67c35a78b719dccab1
+  sha256: eae6ecb60a336da7abd9695e43e603230348b317dc516a73656623e604b95732
 
 build:
-    number: 1
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-    entry_points:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
     - isort = isort.main:main
 
 requirements:
@@ -34,7 +34,7 @@ about:
   home: https://github.com/timothycrosley/isort
   license: MIT
   license_file: LICENSE
-  summary: 'A Python utility / library to sort Python imports.'
+  summary: A Python utility / library to sort Python imports.
   description: |
     isort is a Python utility / library to sort imports alphabetically, and
     automatically separated into sections. It provides a command line utility,
