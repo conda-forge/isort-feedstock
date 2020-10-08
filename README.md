@@ -5,9 +5,13 @@ Home: https://github.com/timothycrosley/isort
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/isort-feedstock/blob/master/LICENSE.txt)
 
 Summary: A Python utility / library to sort Python imports.
+
+Development: https://github.com/timothycrosley/isort
+
+Documentation: http://isort.readthedocs.io/en/latest/
 
 isort is a Python utility / library to sort imports alphabetically, and
 automatically separated into sections. It provides a command line utility,
