@@ -10,26 +10,29 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - isort = isort.main:main
 
 requirements:
   host:
-    - python
+    - python >=3.6,<4.0
     - pip
-    - poetry >=0.12
+    - poetry-core >=1.0.0
   run:
-    - python
+    - python >=3.6,<4.0
     - setuptools
-    - futures  # [py<32]
-    - backports.functools_lru_cache  # [py<32]
 
 test:
   imports:
     - isort
+    - isort._future
   commands:
+    - pip check
     - isort --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/timothycrosley/isort
