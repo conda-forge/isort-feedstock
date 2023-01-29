@@ -28,7 +28,6 @@ requirements:
 test:
   imports:
     - isort
-    - isort._future
   commands:
     - pip check
     - isort --help
