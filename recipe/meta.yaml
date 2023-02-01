@@ -1,4 +1,4 @@
-{% set version = "5.12.0" %}
+{% set version = "5.11.5" %}
 
 package:
   name: isort
@@ -6,32 +6,31 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/isort/isort-{{ version }}.tar.gz
-  sha256: 8bef7dde241278824a6d83f44a544709b065191b95b6e50894bdc722fcba0504
+  sha256: 6be1f76a507cb2ecf16c7cf14a37e41609ca082330be4e3436a18ef74add55db
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - isort = isort.main:main
-    - isort-identify-imports = isort.main:identify_imports_main
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python >=3.6,<4.0
     - pip
     - poetry-core >=1.0.0
   run:
-    - python >=3.8,<4.0
+    - python >=3.6,<4.0
     - setuptools
 
 test:
   imports:
     - isort
+    - isort._future
   commands:
     - pip check
     - isort --help
-    - isort-identify-imports --help
   requires:
     - pip
 
