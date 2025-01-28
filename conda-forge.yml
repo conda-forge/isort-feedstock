@@ -2,6 +2,7 @@ provider: {linux_aarch64: default, linux_ppc64le: default, win: azure}
 conda_forge_output_validation: true
 bot:
   automerge: true
+  inspection: update-grayskull
 github:
   branch_name: main
   tooling_branch_name: main
