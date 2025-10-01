@@ -1,5 +1,5 @@
 {% set name = "isort" %}
-{% set version = "6.0.1" %}
+{% set version = "6.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isort-{{ version }}.tar.gz
-  sha256: 1cb5df28dfbc742e490c5e41bad6da41b805b0a8be7bc93cd0fb2a8a890ac450
+  sha256: 9b8f96a14cfee0677e78e941ff62f03769a06d412aabb9e2a90487b3b7e8d481
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - isort-identify-imports = isort.main:identify_imports_main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,6 +24,7 @@ requirements:
     - hatch-vcs
     - pip
   run:
+    - importlib-metadata >=4.6.0
     - python >={{ python_min }},<4.0
 
 test:
