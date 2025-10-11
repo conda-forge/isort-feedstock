@@ -1,5 +1,5 @@
 {% set name = "isort" %}
-{% set version = "6.1.0" %}
+{% set version = "7.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isort-{{ version }}.tar.gz
-  sha256: 9b8f96a14cfee0677e78e941ff62f03769a06d412aabb9e2a90487b3b7e8d481
+  sha256: 5513527951aadb3ac4292a41a16cbc50dd1642432f5e8c20057d414bdafb4187
 
 build:
   entry_points:
