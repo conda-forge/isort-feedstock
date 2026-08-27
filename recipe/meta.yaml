@@ -1,5 +1,5 @@
 {% set name = "isort" %}
-{% set version = "9.0.0" %}
+{% set version = "9.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/isort-{{ version }}.tar.gz
-  sha256: 268b1ee5eb3a32269b8f876367e57a83ed25040c3c6538e6f2e7388ac6101aec
+  sha256: ba23db109e3e93ef1999f7209a651214994cd807801addd16ac485982eb4edd7
 
 build:
   entry_points:
