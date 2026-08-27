@@ -1,13 +1,13 @@
 {% set name = "isort" %}
-{% set version = "8.0.1" %}
+{% set version = "9.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/isort-{{ version }}.tar.gz
-  sha256: 171ac4ff559cdc060bcfff550bc8404a486fee0caab245679c2abe7cb253c78d
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/isort-{{ version }}.tar.gz
+  sha256: 268b1ee5eb3a32269b8f876367e57a83ed25040c3c6538e6f2e7388ac6101aec
 
 build:
   entry_points:
@@ -24,6 +24,7 @@ requirements:
     - hatch-vcs
     - pip
   run:
+    - mypy_extensions >=1.1.0
     - importlib-metadata >=4.6.0
     - python >={{ python_min }},<4.0
 
